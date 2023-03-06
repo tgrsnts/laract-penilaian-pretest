@@ -27,6 +27,11 @@ use Inertia\Inertia;
 // });
 
 Route::get('/', [IndexController::class, 'index']);
+Route::get('/home', [IndexController::class, 'home']);
+Route::post('/login/admin', [IndexController::class, 'loginAdmin']);
+Route::post('/login/siswa', [IndexController::class, 'loginSiswa']);
+Route::post('/login/guru', [IndexController::class, 'loginGuru']);
+Route::post('/logout', [IndexController::class, 'logout']);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
